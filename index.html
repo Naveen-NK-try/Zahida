@@ -1,473 +1,203 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zahida Trading - Premium Dry Fruits, Nuts & Spices Wholesale & Retail</title>
 
-@*<script src="~/UIJquery/FirstPage.js?version=1001"></script>*@
-<script src="~/UIJquery/FirstPage.js?version=1002"></script>
-<div class="row">
-    <div class="col-md-12 effect37" style="padding:0px;">
-        <div class="row" style="background:#FFD72A;width:100%;margin:0px;">
-            <div class="col-md-3" style="padding:15px;">
-                <img src="~/images/Logo.png" style="width:30%;">
-            </div>
-            <div class="col-md-7" style="padding:15px;">
-                <div class="row" style="text-align:center;">
-                    <div class="col-md-12 ">
-                        <h3> தமிழ்நாடு காவலர் நலன் அங்காடி</h3>
-                    </div>
-                </div>
-                <div class="row" style="text-align:center;">
-                    <div class="col-md-12 ">
-                        <h3> Tamil Nadu Police Welfare Canteen</h3>
-                    </div>
-                </div>
-                <div class="row" style="text-align:center;">
-                    <div class="col-md-12 ">
-                        <h4> Government of Tamil Nadu</h4>
-                    </div>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Zahida Trading offers premium quality dry fruits, dates, nuts, figs, almonds, pistachios, pepper, and raisins for wholesale and retail customers with exceptional service." />
+    <meta name="keywords" content="dry fruits, dates, nuts, figs, almonds, pistachios, pepper, raisins, wholesale dry fruits, retail dry fruits, Zahida Trading, dry fruits supplier Chennai" />
+    <meta name="author" content="Zahida Trading" />
 
-                </div>
-            </div>
-            @*<div class="col-md-3" style="padding:5px;">
-                    <img src="~/images/TN.jpg" style="width:55%;">
-                </div>*@
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="Zahida Trading - Premium Dry Fruits & Spices" />
+    <meta property="og:description" content="Wholesale and retail supplier of dry fruits, nuts, dates, figs, almonds, pistachios, pepper, and raisins." />
+    <meta property="og:image" content="image.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zahida-trading.example.com" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JSON-LD Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Zahida Trading",
+      "image": "https://zahida-trading.example.com/image.jpg",
+      "@id": "https://zahida-trading.example.com",
+      "url": "https://zahida-trading.example.com",
+      "telephone": "+91-XXXXXXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Zahida Street, Spice Market",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ZahidaTrading",
+        "https://www.instagram.com/ZahidaTrading",
+        "https://www.linkedin.com/company/zahida-trading"
+      ],
+      "priceRange": "$$",
+      "description": "Wholesale and retail suppliers of premium dry fruits, dates, nuts, figs, almonds, pistachios, pepper, and raisins in Chennai."
+    }
+    </script>
+</head>
+<body>
+    <!-- Logo and Navigation -->
+    <header>
+        <nav>
+            <img src="image.jpg" alt="Zahida Trading Logo" class="logo">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#quote" class="quote-btn">Get a Quote</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Zahida Trading</h1>
+            <p>Your trusted source for premium dry fruits, nuts, dates, fig, spices, and much more.</p>
+            <img src="https://www.vecteezy.com/photo/10155755-assortment-of-spices-and-dry-fruits" alt="Dry fruits and spices banner" class="banner-img">
+            <a href="#quote" class="cta-button">Get a Quote</a>
         </div>
-        <div class="row" style="margin: 0px; width: 100%;">
-            <nav style="width:100%">
+    </section>
 
-                <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light menushado" id="ftco-navbar" style="margin-bottom:0px;">
-                    <div class="" style="width:100%">
+    <!-- About Us -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Zahida Trading is committed to delivering the finest quality dry fruits, nuts, spices, and more to our wholesale and retail customers. Our focus on premium sourcing, ethical practices, and personalized customer service sets us apart in the industry.</p>
+        <img src="https://www.istockphoto.com/photos/dry-fruits" alt="Dry fruits stock" class="about-img">
+    </section>
 
-                        <div class="navbar-collapse" id="ftco-nav">
-                            <ul class="nav  navbar-nav" style="margin:auto;">
-
-                                <li class="nav-item" id="home"><a href="#" class="nav-link1">Home</a></li>
-
-                                @*<li class="nav-item"><a href="#" class="nav-link">About us</a></li>*@
-
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link1 ">Downloads</a>
-                                    <ul class="dropdown-content" style="list-style: none;min-width: 280px;">
-                                        <li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="NewForm">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>New Firm Registration Form </h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        @*<li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="Form">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>New Registration Form for TPWC</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>*@
-                                        <li class="nav-item" >
-                                            <a href="~/#" class="nav-link" id="RenewalForm">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>Renewal Firm Registration Form</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        @*<li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="Form">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>Renewal Form for TPWC</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>*@
-                                        <li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="Firmlist">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>List of Firms Registered with TPWC</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="Master">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>Master Canteen Code and GST No</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="~/#" class="nav-link" id="IdCardApp">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>ID Card Application</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item" id="MasterList"><a href="#" class="nav-link1">List of Canteens</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link1">Structure of TPWC</a></li>
-
-
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link1">Login/New User</a>
-                                    <ul class="dropdown-content" style="list-style: none;min-width: 170px;">
-                                        <li class="nav-item">
-                                            <a href="~/Login" class="nav-link" id="Form">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>Beneficiaries Login</h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="~/TNBilling" class="nav-link" id="Firmlist">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6>Canteen Login </h6>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        @*<li class="nav-item">
-            <a href="~/Loginkiosk" class="nav-link" id="Form">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h6>Kiosk Login</h6>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="~/LoginVendor" class="nav-link" id="Firmlist">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h6>Suppliers Login </h6>
-                    </div>
-                </div>
-            </a>
-        </li>*@
-
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </nav>
+    <!-- Products -->
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/almonds" alt="Almonds">
+                <h3>Almonds</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/dates-fruit" alt="Dates">
+                <h3>Dates</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/pistachios-nuts" alt="Pistachios">
+                <h3>Pistachios</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/figs" alt="Figs">
+                <h3>Figs</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/nuts-mix" alt="Nuts">
+                <h3>Nuts</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/pepper-spice" alt="Pepper">
+                <h3>Pepper</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/raisins" alt="Raisins">
+                <h3>Raisins</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://www.istockphoto.com/photos/dry-fruits" alt="Dry Fruits">
+                <h3>Dry Fruits</h3>
+            </div>
         </div>
-      
-        <div class="row" style="margin: 0px; width: 100%;">
-            <div class="col-md-3 effect22" style="padding:0px;">
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mGrocery">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Grocery.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Grocery</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mPersonal">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Personal.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Personal Care</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mKitchen">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Kitchen.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Home & Kitchen</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mHomeAppliance">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/HomeAppli.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Home Appliances</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mElectrical">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Electrical.jpg" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Electrical</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mElectronics">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Electronic.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Electronics</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mMobile">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Mobile.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Mobile & Accessories</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
+    </section>
 
-                <div class="row">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mLife">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/Clothing.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Life Style</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row" style="margin-bottom:7px">
-                    <div class="dropdown-contentFP">
-                        <a href="#" class="nav-link" id="mVehicles">
-                            <div class="row">
-                                <div class="col-md-4"><img src="~/images/vehicle.png" style="width:100%;height: 100%;" /></div>
-                                <div class="col-md-8 mt-3">
-                                    <h5>Vehicles</h5>
-                                    @*<h6>99% Accuracy by human professionals</h6>*@
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    <!-- Get a Quote Form -->
+    <section id="quote" class="quote-section">
+        <h2>Get a Quote</h2>
+        <form id="quoteForm" novalidate>
+            <div class="form-group">
+                <input type="text" name="name" id="quoteName" placeholder="Name" required>
+                <span class="error" id="nameError"></span>
             </div>
-            <div class="col-md-6" style="z-index:0;" id="divCont">
-                <div class="row  mt-2" hidden>
-                    <marquee width="90%" direction="left" height="20px" style="font-size: 14px;font-weight: bold; color: red;">
-                        Last date to Submit New/Renewal Application - 03/12/2021. For any clarifications on filling applications, please contact 044-28448000 Ext 451, Any technical support, Please contact +919884818074, Call in Office hours (10 AM to 5 PM)
-                    </marquee>
-                </div>
-
-                <div class="row  mt-2" id="divHome">
-
-                    <div id="wowslider-container1">
-                        <div class="ws_images">
-                            <ul>
-                                <li><img src="~/images/Banner_3.png" id="wows1_0"></li>
-                                <li><img src="~/images/HomeAppli.png" id="wows1_1"></li>
-                                <li><img src="~/images/Kitchen.png" id="wows1_2"></li>
-                                <li><img src="~/images/Personal.png" id="wows1_0"></li>
-                                <li><img src="~/images/Bags.jpg" id="wows1_1"></li>
-                                <li><img src="~/images/Grocery.png" id="wows1_2"></li>
-                                <li><img src="~/images/Footwear.jpg" id="wows1_0"></li>
-                            </ul>
-                        </div>
-                        <div class="ws_bullets">
-                            <div>
-                                <a href="#"><img src="~/images/Banner1.jpg" style="width:250px;">1</a>
-                                <a href="#"><img src="~/images/Banner2.jpg" style="width:250px;">2</a>
-                                <a href="#"><img src="~/images/Banner3.jpg" style="width:250px;">3</a>
-                                <a href="#"><img src="~/images/BG_Sample.jpg" style="width:250px;">4</a>
-                                <a href="#"><img src="~/images/Banner1.png" style="width:250px;">5</a>
-                                <a href="#"><img src="~/images/Banner3.jpg" style="width:250px;">6</a>
-                                <a href="#"><img src="~/images/Banner2.jpg" style="width:250px;">7</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="spec mt-3 box4side" id="headingt" style="padding:20px;">
-                        <h4 class="mb-3"><b>Welcome to Tamil Nadu Police Welfare Canteen</b></h4>
-                        <p>
-                            The Government of Tamil Nadu have accorded sanction to establish 56 Police Welfare Canteen in all District Headquarters, 15 Battalions and at the Tamil Nadu Police Academy and all the 56 Welfare Unit Canteens are fully functional throughout the State.
-                        </p>
-                        <h4 class="mb-3"><b>Beneficiaries</b></h4>
-                        <p>
-                            The Welfare Canteen facilities have been provided to the serving ,retired personnel, family pensioners, Ministerial Staff of the Police Department,Fire and Rescue Services Department,Prison Department,Forest Department of the Tamil Nadu Government and serving Home Guards personnel. As of now, nearly 2.12 lakh beneficiaries are availing the Police Welfare Canteen facilities.
-                        </p>
-                        <h4 class="mb-3"><b>Products</b></h4>
-                        <p>Presently, around 18,000 products such as Consumer durables, Household articles, Electrical & Electronic articles and Groceries are being sold at cheaper rates to the beneficiaries.  </p>
-                    </div>
-                </div>
-                <div class="row  mt-2" id="divcategory" hidden>
-                    <div class="col-md-12">
-                        <table class="table table-striped table-bordered  mt-2" cellspacing="0" width="100%" id="grd_product">
-                            <thead>
-                                <tr>
-                                    <td>SNo</td>
-                                    <td>Firms</td>
-                                    <td>Products</td>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="row  mt-2" id="divmaster" hidden>
-                    <div class="col-md-12">
-                        <table class="table table-striped table-bordered  mt-2" cellspacing="0" width="100%" id="grd_Master">
-                            <thead>
-                                <tr>
-                                    <td>SNo</td>
-                                    <td>Code </td>
-                                    <td>Canteen Type</td>
-                                    <td>Name</td>
-                                    <td>Address</td>
-                                    @*<td>GST No</td>*@
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="form-group">
+                <input type="email" name="email" id="quoteEmail" placeholder="Email" required>
+                <span class="error" id="emailError"></span>
             </div>
-
-            <div class="col-md-3 effect28" style=" background:whitesmoke;">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="content">
-                            <div class="col-md-12"><img class="img1" src="~/images/CM.Jpeg" /></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" hidden>
-                    <div class="col-md-12">
-                        <div class="content" style="height:425px;">
-                            <div class="row">
-                                <div class="col-md-12 head1">காவல்துறை தலைமை இயக்குனர்</div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12"><hr /></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-
-                                </div>
-                                <div class="col-md-4"><img class="img1" src="~/images/DG.jpg" /></div>
-                                <div class="col-md-6">
-                                    <div class="row Sub">
-                                        தமிழ்நாடு காவலர் நலன் அங்காடி
-                                    </div>
-                                </div>
-                            </div>
-                            @*<div class="row">
-                            <div class="col-md-12 name1">முனைவர் சைலேந்திர பாபு, ஐபிஎஸ்</div>
-                        </div>*@
-                            @*<div class="row">
-                            <div class="col-md-12 Addr">
-                                தமிழ்நாடு
-                            </div>
-                        </div>*@
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="content">
-                            @*<div class="row">
-                            <div class="col-md-12 head1"> தலைவர்</div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12"><hr /></div>
-                        </div>*@
-                            <div class="row mt-4">
-                                <div class="col-md-4">
-
-                                </div>
-                                <div class="col-md-4" style="text-align:center;">
-                                    <img class="bximg" src="~/images/Chr.jpg" />
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 name1">Dr.M.Durai,IPS</div>
-                            </div>
-
-                            <div class="row Sub" style="text-align:center;">
-                                <div class="col-md-12 Sub" style="color:black;"> Deputy Inspector General of Police</div>
-
-                            </div>
-
-                            <div class="row Sub" style="text-align:center;">
-                                <div class="col-md-12 Sub" style="color:black;">
-                                    Welfare
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+                <input type="tel" name="phone" id="quotePhone" placeholder="Phone" required pattern="[0-9]{10}">
+                <span class="error" id="phoneError"></span>
             </div>
+            <div class="form-group">
+                <select name="product" id="quoteProduct" required>
+                    <option value="">Product Interest</option>
+                    <option value="Dry Fruits">Dry Fruits</option>
+                    <option value="Dates">Dates</option>
+                    <option value="Nuts">Nuts</option>
+                    <option value="Figs">Figs</option>
+                    <option value="Almonds">Almonds</option>
+                    <option value="Pistachios">Pistachios</option>
+                    <option value="Pepper">Pepper</option>
+                    <option value="Raisins">Raisins</option>
+                </select>
+                <span class="error" id="productError"></span>
+            </div>
+            <div class="form-group">
+                <input type="number" name="quantity" id="quoteQuantity" placeholder="Quantity (kg)" min="1" required>
+                <span class="error" id="quantityError"></span>
+            </div>
+            <div class="form-group">
+                <textarea name="message" id="quoteMessage" placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <div id="quoteSuccess" style="display:none;">Thank you for your quote request. We will get in touch soon!</div>
+    </section>
 
+    <!-- Contact Us -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Company Address: 123 Zahida Street, Spice Market, Chennai, India</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Email: info@zahidatrading.com</p>
+        <form id="contactForm">
+            <input type="text" name="cname" placeholder="Name" required>
+            <input type="email" name="cemail" placeholder="Email" required>
+            <textarea name="cmessage" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="contactSuccess" style="display:none;">Thanks for contacting us! We'll respond soon.</div>
+    </section>
 
-
-
-
-        </div>
-    </div>
-
-   
-
-    <div id="mySidenav" class="sidenav">
-        <a href="https://tnpolicecanteen.tn.gov.in:8080" target="_blank" id="about" class="rotate"><img src="images/IOS.png" width="150px;" /></a>
-        <a href="https://play.google.com/store/apps/details?id=tamil.nadu.police.canteenservice&pli=1" target="_blank" id="blog" class="rotate"><img src="images/Android.png" width="150px;" /></a>
-    </div>
-</div>
-
-
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Zahida Trading. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
