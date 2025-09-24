@@ -97,68 +97,44 @@
         <p>
           Zahida Trading is committed to delivering the finest quality dry fruits, nuts, spices, and more to our wholesale and retail customers. Our focus on premium sourcing, ethical practices, and personalized customer service sets us apart in the industry.
         </p>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80.webp" alt="Dry fruits stock" class="about-img" />
+        <img src="dry-fruits-stock.webp" alt="Dry fruits stock" class="about-img" loading="lazy" />
     </section>
 
     <!-- Products -->
     <section id="products" class="products-section">
         <h2>Our Products</h2>
         <div class="products-grid">
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Dry Fruits" loading="lazy" />
-                </picture>
+                <img src="dry-fruits.webp" alt="Dry Fruits" loading="lazy" />
                 <h3>Dry Fruits</h3>
             </div>
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1503256207526-0ee9defe3097?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1503256207526-0ee9defe3097?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Dates" loading="lazy" />
-                </picture>
+                <img src="dates.webp" alt="Dates" loading="lazy" />
                 <h3>Dates</h3>
             </div>
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Almonds" loading="lazy" />
-                </picture>
+                <img src="almonds.webp" alt="Almonds" loading="lazy" />
                 <h3>Almonds</h3>
             </div>
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1590080877777-cb30739e19bf?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1590080877777-cb30739e19bf?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Pistachios" loading="lazy" />
-                </picture>
+                <img src="pistachios.webp" alt="Pistachios" loading="lazy" />
                 <h3>Pistachios</h3>
             </div>
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Pepper" loading="lazy" />
-                </picture>
+                <img src="pepper.webp" alt="Pepper" loading="lazy" />
                 <h3>Pepper</h3>
             </div>
-
             <div class="product-card">
-                <picture>
-                    <source srcset="https://images.unsplash.com/photo-1536305037892-1057dc42ab16?auto=format&fit=crop&w=600&q=80.webp" type="image/webp" />
-                    <source srcset="https://images.unsplash.com/photo-1536305037892-1057dc42ab16?auto=format&fit=crop&w=600&q=80" type="image/jpeg" />
-                    <img alt="Raisins" loading="lazy" />
-                </picture>
+                <img src="raisins.webp" alt="Raisins" loading="lazy" />
                 <h3>Raisins</h3>
             </div>
-
+            <!-- Add more products, e.g., Figs, Nuts as needed -->
+            <!--
+            <div class="product-card">
+                <img src="figs.webp" alt="Figs" loading="lazy" />
+                <h3>Figs</h3>
+            </div>
+            -->
         </div>
     </section>
 
@@ -175,14 +151,7 @@
                 <span class="error" id="emailError"></span>
             </div>
             <div class="form-group">
-                <input
-                    type="tel"
-                    name="phone"
-                    id="quotePhone"
-                    placeholder="Phone"
-                    required
-                    pattern="[0-9]{10}"
-                />
+                <input type="tel" name="phone" id="quotePhone" placeholder="Phone" required pattern="[0-9]{10}" />
                 <span class="error" id="phoneError"></span>
             </div>
             <div class="form-group">
@@ -200,14 +169,7 @@
                 <span class="error" id="productError"></span>
             </div>
             <div class="form-group">
-                <input
-                    type="number"
-                    name="quantity"
-                    id="quoteQuantity"
-                    placeholder="Quantity (kg)"
-                    min="1"
-                    required
-                />
+                <input type="number" name="quantity" id="quoteQuantity" placeholder="Quantity (kg)" min="1" required />
                 <span class="error" id="quantityError"></span>
             </div>
             <div class="form-group">
@@ -215,7 +177,7 @@
             </div>
             <button type="submit">Send</button>
         </form>
-        <div id="quoteSuccess" style="display: none">
+        <div id="quoteSuccess" style="display:none;">
             Thank you for your quote request. We will get in touch soon!
         </div>
     </section>
@@ -232,7 +194,7 @@
             <textarea name="cmessage" placeholder="Message"></textarea>
             <button type="submit">Send</button>
         </form>
-        <div id="contactSuccess" style="display: none">Thanks for contacting us! We'll respond soon.</div>
+        <div id="contactSuccess" style="display: none;">Thanks for contacting us! We'll respond soon.</div>
     </section>
 
     <!-- Footer -->
