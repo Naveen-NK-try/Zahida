@@ -106,35 +106,55 @@ nav ul li a:hover {
   border-radius: 9px;
 }
 
+.products-section {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 30px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+}
+
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 30px;
-  margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 38px;
+  margin-top: 38px;
 }
 
 .product-card {
   background: #fff7e6;
-  border: 1px solid #eed085;
-  border-radius: 10px;
+  border: 2px solid #eed085;
+  border-radius: 12px;
   text-align: center;
-  padding: 16px 6px 10px 6px;
-  box-shadow: 0 0 7px rgba(255, 160, 0, 0.06);
+  padding: 22px 18px 18px 18px;
+  box-shadow: 0 0 12px rgba(255, 160, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 320px;
+  justify-content: space-between;
 }
 
-.product-card img {
-  width: 88px;
-  height: 88px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+.product-img {
+  width: 100%;
+  height: 180px;
+  max-width: 300px;
   object-fit: cover;
-  border: 2px solid #ff9000;
+  border-radius: 10px;
+  border: 3px solid #ff9000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  background: #fff;
+  margin-bottom: 15px;
 }
 
 .product-card h3 {
   color: #ff9000;
-  font-size: 1.05em;
-  margin-bottom: 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 8px;
+  letter-spacing: 0.03em;
 }
 
 .quote-section form,
@@ -183,36 +203,33 @@ textarea:invalid {
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
   }
-  .about-section,
-  .products-section,
-  .quote-section,
-  .contact-section {
-    padding: 15px 8px;
+  .product-card {
+    height: 260px;
+    padding: 16px 6px 10px 6px;
   }
-  nav ul {
-    gap: 16px;
-  }
-  .banner-img,
-  .about-img {
-    max-width: 98vw;
+  .product-img {
+    height: 120px;
+    max-width: 200px;
   }
 }
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0 10px 0;
-  margin-top: 48px;
-}
+
 @media (max-width: 600px) {
   .form-group input,
   .form-group select,
   .form-group textarea {
     font-size: 1em;
   }
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0;
+  margin-top: 48px;
 }
