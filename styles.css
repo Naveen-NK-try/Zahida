@@ -136,8 +136,12 @@ nav ul li a:hover {
   justify-content: flex-start;
   gap: 18px;
   overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
+.product-card:hover {
+  box-shadow: 0 6px 20px rgba(255, 144, 0, 0.18);
+  transform: translateY(-3px) scale(1.03);
+}
 .product-img, .product-card picture img {
   width: 100%;
   height: 180px;
@@ -203,8 +207,46 @@ textarea:invalid {
   border-radius: 7px;
   font-size: 1.1em;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 144, 0, 0.13);
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.quote-section form button:hover,
+.contact-section form button:hover {
+  background: #222;
+  color: #ff9000;
 }
 
+.contact-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 36px auto;
+  padding: 30px 20px 50px 20px;
+  position: relative;
+}
+.contact-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-form-col {
+  flex: 1 1 340px;
+}
+.contact-map-col {
+  flex: 0 0 350px;
+  max-width: 350px;
+}
+.map-embed {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 13px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border: none;
+}
 @media (max-width: 900px) {
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -218,6 +260,14 @@ textarea:invalid {
     height: 120px;
     max-width: 130px;
   }
+  .contact-row {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .contact-map-col {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -228,10 +278,38 @@ textarea:invalid {
   }
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 48px;
+  padding: 40px 0 10px 0;
+  background: #161a1e;
+}
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.2s;
+}
+.social-icons svg {
+  display: block;
+  height: 38px;
+  width: 38px;
+}
+.social-icons a:hover svg path,
+.social-icons a:hover svg rect,
+.social-icons a:hover svg circle {
+  filter: brightness(1.6);
+}
 footer {
-  background: #222;
-  color: #fff;
+  background: #161a1e;
+  color: #e7ca5c;
   text-align: center;
-  padding: 30px 0 10px 0;
-  margin-top: 48px;
+  padding: 0 0 24px 0;
+  border-radius: 0 0 12px 12px;
+}
+footer p {
+  color: #e7ca5c;
+  margin-top: 14px;
 }
