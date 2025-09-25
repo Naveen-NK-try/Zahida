@@ -14,21 +14,323 @@
   <meta property="og:url" content="https://zahida-trading.example.com" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .social-icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 48px;
-      padding: 40px 0 10px 0;
-      background: #161a1e;
+    /* Base Styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff7e6;
+      color: #222;
+      min-height: 100vh;
     }
-    .social-icons a {
+
+    /* Header & Logo */
+    header {
+      background: linear-gradient(90deg, #ff9000 0%, #222 100%);
+      padding: 0.6em 0;
+    }
+    nav {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1em;
+      position: relative;
     }
-    .social-icons svg {
+    .logo {
+      width: 170px;
+      max-height: 75px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      border-radius: 16px;
+      background: #fff;
+      padding: 6px 0;
+    }
+    .logo:hover {
+      transform: scale(1.08);
+    }
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.1em;
+      padding: 7px 16px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    nav ul li a.active,
+    nav ul li a.quote-btn,
+    nav ul li a:hover {
+      background: #ffa94d;
+      color: #222;
+    }
+
+    /* Hamburger (for mobile) */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .nav-toggle span {
+      background: #ff9000;
+      border-radius: 2px;
+      height: 4px;
+      margin: 4px 0;
+      width: 30px;
       display: block;
+      transition: all 0.3s;
+    }
+    @media (max-width: 700px) {
+      nav ul {
+        flex-direction: column;
+        top: 68px;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background: #222;
+        width: 100%;
+        display: none;
+        z-index: 5;
+      }
+      nav ul.show {
+        display: flex;
+        box-shadow: 0 8px 12px rgba(0,0,0,0.12);
+      }
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #fff3e0;
+      padding: 24px 0 38px 0;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 15px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+      padding: 28px 16px;
+    }
+    .hero-content h1 {
+      font-size: 2em;
+      color: #ff9000;
+      margin-bottom: 12px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    .hero-content p {
+      font-size: 1.09em;
+      color: #333;
+      margin-bottom: 18px;
+      margin-top: 0;
+    }
+    .banner-img {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto 14px auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.13);
+      display: block;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #ff9000;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 1.08em;
+      margin-top: 15px;
+      transition: background 0.2s;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta-button:hover {
+      background: #222;
+      color: #ff9000;
+    }
+
+    /* About Section */
+    .about-section {
+      max-width: 600px;
+      margin: 28px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 26px 16px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.06);
+    }
+    .about-section h2 {
+      font-size: 1.25em;
+      color: #ff9000;
+      font-weight: bold;
+    }
+    .about-section p {
+      font-size: 1em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+    .about-img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+      display: block;
+      margin-top: 8px;
+    }
+
+    /* Products */
+    .products-section {
+      max-width: 1200px;
+      margin: 48px auto 0 auto;
+      padding: 24px 12px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 0 16px rgba(0,0,0,0.07);
+    }
+    .products-section h2 {
+      font-size: 1.2em;
+      color: #ff9000;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 28px;
+    }
+    .product-card {
+      background: #fff7e6;
+      border: 2px solid #eed085;
+      border-radius: 12px;
+      text-align: center;
+      padding: 18px 9px 11px 9px;
+      box-shadow: 0 0 10px rgba(255, 160, 0, 0.09);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      font-size: 1em;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 22px rgba(255, 144, 0, 0.17);
+      transform: scale(1.05);
+    }
+    .product-img {
+      width: 100%;
+      height: 110px;
+      max-width: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #ff9000;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.11);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .product-card h3 {
+      color: #ff9000;
+      font-size: 1.1em;
+      margin: 0;
+      font-weight: bold;
+    }
+    @media (max-width: 700px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .product-card {
+        padding: 12px 6px 9px 6px;
+        font-size: 1em;
+      }
+    }
+    /* Forms */
+    .quote-section,
+    .contact-section {
+      max-width: 700px;
+      margin: 38px auto 0 auto;
+      padding: 24px 12px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 0 14px rgba(0,0,0,0.05);
+    }
+    .quote-section h2,
+    .contact-section h2 {
+      font-size: 1.17em;
+      color: #ff9000;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ffc88a;
+      font-size: 1em;
+      background: #fffbf3;
+    }
+    button {
+      background: #ff9000;
+      color: #fff;
+      border: none;
+      padding: 11px;
+      border-radius: 7px;
+      font-size: 1.09em;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(255,144,0,0.09);
+      transition: background 0.2s;
+      margin-top: 7px;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #222;
+      color: #ff9000;
+    }
+
+    /* Contact + Map */
+    .contact-row {
+      display: flex;
+      flex-direction: row;
+      gap: 34px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .contact-form-col { flex: 2 2 340px; }
+    .contact-map-col { flex: 1 1 280px; max-width: 350px; }
+    .map-embed {
+      width: 100%;
+      min-height: 220px;
+      border-radius: 13px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+      border: none;
+      margin-top: 12px;
+    }
+    @media (max-width: 920px) {
+      .contact-row {
+        flex-direction: column;
+        gap: 22px;
+      }
+      .contact-map-col{
+        max-width: 100%;
+        width: 100%;
+      }
     }
     footer {
       background: #161a1e;
@@ -36,25 +338,48 @@
       text-align: center;
       padding: 0 0 24px 0;
       border-radius: 0 0 12px 12px;
+      margin-top: 38px;
     }
-    footer p { color: #e7ca5c; margin-top: 14px; }
-    .contact-section { background: #fff; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.05); max-width: 900px; margin: 36px auto; padding: 30px 20px 50px 20px; position: relative; }
-    .contact-row { display: flex; flex-direction: row; gap: 40px; align-items: flex-start; justify-content: space-between; }
-    .contact-form-col { flex: 1 1 340px; }
-    .contact-map-col { flex: 0 0 350px; max-width: 350px; }
-    .map-embed { width: 100%; min-height: 220px; border-radius: 13px; box-shadow: 0 2px 12px rgba(0,0,0,0.13); border: none; }
-    @media (max-width: 900px) {
-      .contact-row { flex-direction: column; gap: 22px; }
-      .contact-map-col { max-width: 100%; width: 100%; }
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 38px;
+      padding: 24px 0 8px 0;
+      background: #161a1e;
+    }
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: filter 0.2s;
+    }
+    .social-icons svg {
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+    .social-icons a:hover svg path,
+    .social-icons a:hover svg rect,
+    .social-icons a:hover svg circle {
+      filter: brightness(1.5);
+    }
+    footer p {
+      color: #e7ca5c;
+      margin-top: 11px;
     }
   </style>
 </head>
 <body>
-  <!-- Logo and Navigation -->
   <header>
     <nav>
       <img src="image.jpg" alt="Zahida Trading Logo" class="logo" />
-      <ul>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="navMenu">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#products">Products</a></li>
@@ -64,7 +389,6 @@
     </nav>
   </header>
 
-  <!-- Hero Banner -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Welcome to Zahida Trading</h1>
@@ -74,14 +398,12 @@
     </div>
   </section>
 
-  <!-- About Us -->
   <section id="about" class="about-section">
     <h2>About Us</h2>
     <p>Zahida Trading is committed to delivering the finest quality dry fruits, nuts, spices, and more to our wholesale and retail customers. Our focus on premium sourcing, ethical practices, and personalized customer service sets us apart in the industry.</p>
     <img src="stock.png" alt="Dry fruits stock" class="about-img" loading="lazy" />
   </section>
 
-  <!-- Products -->
   <section id="products" class="products-section">
     <h2>Our Products</h2>
     <div class="products-grid">
@@ -96,7 +418,6 @@
     </div>
   </section>
 
-  <!-- Get a Quote Form -->
   <section id="quote" class="quote-section">
     <h2>Get a Quote</h2>
     <form id="quoteForm" action="https://formspree.io/f/mrbybkbq" method="POST">
@@ -122,7 +443,6 @@
     </form>
   </section>
 
-  <!-- Contact Us + Map -->
   <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
     <div class="contact-row">
@@ -141,7 +461,6 @@
     </div>
   </section>
 
-  <!-- Footer with Social Icons -->
   <footer>
     <div class="social-icons">
       <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener" title="X">
@@ -157,25 +476,23 @@
     <p>&copy; 2025 Zahida Trading. All Rights Reserved.</p>
   </footer>
   <script>
-  // Navigation highlight
-  window.onscroll = function () {
-    const sections = ['home', 'about', 'products', 'quote', 'contact'];
-    let scrollPos = window.scrollY || document.documentElement.scrollTop;
-    for (let i = 0; i < sections.length; i++) {
-      const section = document.getElementById(sections[i]);
-      if (section && section.offsetTop <= scrollPos + 100) {
-        document.querySelectorAll('nav ul li a').forEach((a) => a.classList.remove('active'));
-        document.querySelector('nav ul li a[href="#' + sections[i] + '"]').classList.add('active');
+    // Hamburger menu toggle for mobile
+    document.getElementById('navToggle').onclick = function() {
+      document.getElementById('navMenu').classList.toggle('show');
+    };
+
+    // Navigation highlight
+    window.onscroll = function () {
+      const sections = ['home', 'about', 'products', 'quote', 'contact'];
+      let scrollPos = window.scrollY || document.documentElement.scrollTop;
+      for (let i = 0; i < sections.length; i++) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPos + 100) {
+          document.querySelectorAll('nav ul li a').forEach((a) => a.classList.remove('active'));
+          document.querySelector('nav ul li a[href="#' + sections[i] + '"]').classList.add('active');
+        }
       }
-    }
-  };
+    };
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
