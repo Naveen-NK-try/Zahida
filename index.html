@@ -23,8 +23,6 @@
       color: #222;
       min-height: 100vh;
     }
-
-    /* Header & Logo */
     header {
       background: linear-gradient(90deg, #ff9000 0%, #222 100%);
       padding: 0.6em 0;
@@ -72,8 +70,6 @@
       background: #ffa94d;
       color: #222;
     }
-
-    /* Hamburger (for mobile) */
     .nav-toggle {
       display: none;
       flex-direction: column;
@@ -109,8 +105,6 @@
         display: flex;
       }
     }
-
-    /* Hero Section */
     .hero {
       background: #fff3e0;
       padding: 24px 0 38px 0;
@@ -161,8 +155,6 @@
       background: #222;
       color: #ff9000;
     }
-
-    /* About Section */
     .about-section {
       max-width: 600px;
       margin: 28px auto;
@@ -189,8 +181,7 @@
       display: block;
       margin-top: 8px;
     }
-
-    /* Products */
+    /* Updated Products Section for Equal Boxes and Zoom Animation */
     .products-section {
       max-width: 1200px;
       margin: 48px auto 0 auto;
@@ -207,39 +198,48 @@
     }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 30px;
       margin-top: 28px;
     }
     .product-card {
       background: #fff7e6;
       border: 2px solid #eed085;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
-      padding: 18px 9px 11px 9px;
+      aspect-ratio: 1/1;
+      padding: 18px 14px 18px 14px;
       box-shadow: 0 0 10px rgba(255, 160, 0, 0.09);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      justify-content: center;
       transition: box-shadow 0.2s, transform 0.2s;
-      font-size: 1em;
     }
-    .product-card:hover {
-      box-shadow: 0 6px 22px rgba(255, 144, 0, 0.17);
-      transform: scale(1.05);
+    .product-img-box {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: #fff;
+      overflow: hidden;
+      border: 3px solid #ff9000;
+      box-shadow: 0 2px 10px rgba(255, 160, 0, 0.11);
+      transition: box-shadow 0.2s;
     }
     .product-img {
       width: 100%;
-      height: 110px;
-      max-width: 130px;
+      height: 100%;
       object-fit: cover;
       border-radius: 10px;
-      border: 3px solid #ff9000;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.11);
-      margin-bottom: 6px;
-      display: block;
+      transition: transform 0.35s cubic-bezier(.34,1.4,.49,.98);
+    }
+    .product-img-box:hover .product-img,
+    .product-card:hover .product-img {
+      transform: scale(1.14);
     }
     .product-card h3 {
       color: #ff9000;
@@ -247,13 +247,31 @@
       margin: 0;
       font-weight: bold;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .products-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+      }
+      .product-img-box {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
       .product-card {
-        padding: 12px 6px 9px 6px;
+        padding: 10px;
+        aspect-ratio: 1/1;
+      }
+      .product-img-box {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 12px;
+      }
+      .product-card h3 {
         font-size: 1em;
       }
     }
@@ -303,8 +321,6 @@
       background: #222;
       color: #ff9000;
     }
-
-    /* Contact + Map */
     .contact-row {
       display: flex;
       flex-direction: row;
@@ -388,7 +404,6 @@
       </ul>
     </nav>
   </header>
-
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Welcome to Zahida Trading</h1>
@@ -397,31 +412,76 @@
       <a href="#quote" class="cta-button">Get a Quote</a>
     </div>
   </section>
-
   <section id="about" class="about-section">
     <h2>About Us</h2>
     <p>Zahida Trading is committed to delivering the finest quality dry fruits, nuts, spices, and more to our wholesale and retail customers. Our focus on premium sourcing, ethical practices, and personalized customer service sets us apart in the industry.</p>
     <img src="stock.png" alt="Dry fruits stock" class="about-img" loading="lazy" />
   </section>
-
   <section id="products" class="products-section">
     <h2>Our Products</h2>
     <div class="products-grid">
-      <div class="product-card"><img src="dry-fruits.jpg" alt="Dry Fruits" class="product-img" loading="lazy" /><h3>Dry Fruits</h3></div>
-      <div class="product-card"><img src="dates.jpg" alt="Dates" class="product-img" loading="lazy" /><h3>Dates</h3></div>
-      <div class="product-card"><img src="almonds.jpg" alt="Almonds" class="product-img" loading="lazy" /><h3>Almonds</h3></div>
-      <div class="product-card"><img src="pisatachios.jpg" alt="Pistachios" class="product-img" loading="lazy" /><h3>Pistachios</h3></div>
-      <div class="product-card"><img src="pepper1.jpg" alt="Pepper" class="product-img" loading="lazy" /><h3>Pepper</h3></div>
-      <div class="product-card"><img src="raisins.jpg" alt="Raisins" class="product-img" loading="lazy" /><h3>Raisins</h3></div>
-      <div class="product-card"><img src="cardamom.jpg" alt="Cardamom" class="product-img" loading="lazy" /><h3>Cardamom</h3></div>
-      <div class="product-card"><img src="fig.jpg" alt="Fig" class="product-img" loading="lazy" /><h3>Fig</h3></div>
-      <div class="product-card"><img src="Apricots.jpg" alt="Apricots" class="product-img" loading="lazy" /><h3>Apricots</h3></div>
-      <div class="product-card"><img src="turmeric.jpeg" alt="Turmeric" class="product-img" loading="lazy" /><h3>Turmeric</h3></div>
-    </div class="product-card"> 
-
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="dry-fruits.jpg" alt="Dry Fruits" class="product-img" loading="lazy" />
+        </div>
+        <h3>Dry Fruits</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="dates.jpg" alt="Dates" class="product-img" loading="lazy" />
+        </div>
+        <h3>Dates</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="almonds.jpg" alt="Almonds" class="product-img" loading="lazy" />
+        </div>
+        <h3>Almonds</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="pisatachios.jpg" alt="Pistachios" class="product-img" loading="lazy" />
+        </div>
+        <h3>Pistachios</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="pepper1.jpg" alt="Pepper" class="product-img" loading="lazy" />
+        </div>
+        <h3>Pepper</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="raisins.jpg" alt="Raisins" class="product-img" loading="lazy" />
+        </div>
+        <h3>Raisins</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="cardamom.jpg" alt="Cardamom" class="product-img" loading="lazy" />
+        </div>
+        <h3>Cardamom</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="fig.jpg" alt="Fig" class="product-img" loading="lazy" />
+        </div>
+        <h3>Fig</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="Apricots.jpg" alt="Apricots" class="product-img" loading="lazy" />
+        </div>
+        <h3>Apricots</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="turmeric.jpeg" alt="Turmeric" class="product-img" loading="lazy" />
+        </div>
+        <h3>Turmeric</h3>
+      </div>
     </div>
   </section>
-
   <section id="quote" class="quote-section">
     <h2>Get a Quote</h2>
     <form id="quoteForm" action="https://formspree.io/f/mrbybkbq" method="POST">
@@ -448,7 +508,6 @@
       <button type="submit">Send</button>
     </form>
   </section>
-
   <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
     <div class="contact-row">
@@ -466,7 +525,6 @@
       </div>
     </div>
   </section>
-
   <footer>
     <div class="social-icons">
       <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener" title="X">
@@ -486,7 +544,6 @@
     document.getElementById('navToggle').onclick = function() {
       document.getElementById('navMenu').classList.toggle('show');
     };
-
     // Navigation highlight
     window.onscroll = function () {
       const sections = ['home', 'about', 'products', 'quote', 'contact'];
@@ -502,9 +559,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
